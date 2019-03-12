@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="mininum-scale=1.0, width=device-width,maximum-scale=1.0,user-scalable=no"/>
+    <meta charset="utf-8">
+    <title>Websocket</title>
+
+     
+  </head>
+  <body>
+    <h1>Websocket</h1>
+    <div class="messages"></div>
+    <form action="javascript:void(0)">
+      <label>&gt;</label>
+      <input type="text" id="message" required autofocus />
+    </form>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script type="text/javascript">
+      
+  // if user is running mozilla then use it's built-in WebSocket
+ // window.WebSocket = window.WebSocket || window.MozWebSocket;
+   var ws = new WebSocket('ws://localhost:3000');
+
+ws.onopen = function(){
+}
+
+ws.onclose = function(){
+}
+ws.onmessage = function(payload){
+	console.log("p "+payload.data);
+  // ws.send("hello", function(error) {
+  //   if(error == undefined)
+  //       return;
+  //   //else
+  //    // logger.debug("Async error:"+error);
+  // });
+  
+}
+// document.form[0].onSubmit = function(){
+//   var input = document.getElementById('message');
+//   input.value = '';
+// }
+// function printMessage(message){
+//   var p = document.createElement('p');
+  
+//   p.innerText = message;
+//   //socket.emit("testerEvent",{ description: message});
+//   document.querySelector('div.messages').appendChild(p);
+// }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwXSe5_m-W1Kyrh57yyOGkRrQehnOsTt4&libraries=places&callback=initAutocomplete"
+    async defer></script>
+  </body>
+</html>

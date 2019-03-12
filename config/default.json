@@ -1,0 +1,6 @@
+{
+  "jwtPrivateKey": "unsecureKey",
+  "db": "mongodb://admin:sopa1234@ds139951.mlab.com:39951/nijis",
+  "port": "3900",
+  "requiresAuth": false
+}
